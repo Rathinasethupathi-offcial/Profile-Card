@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --background-color: #F5F5F5;
+  --text-color: #333333;
+
+  --backround-card-bg:#ffffff;
+  --inner-card-bg:#F5F5F5;
+  --name-color:#586E75;
+  --role-color:#586E75;
+  --about-color:#586E75;
+  --gmail-color:#586E75;
+  --profile-image:#ffffff;
+  --gmail-bg:#fff9f9;
+  --inner-card-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+[data-theme="dark"] {
+  
+  --backround-card-bg:#181818;
+  --inner-card-bg:#171717;
+  --name-color:#D3DADA;
+  --role-color:#D3DADA;
+  --about-color:#D3DADA;
+  --gmail-color:#D3DADA;
+  --profile-image:#181818;
+  --gmail-bg:#121212;
+  --inner-card-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.backround-card
+{
+  background-color:var(--backround-card-bg);
+  width: 400px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+}
+.toggle
+{
+position: absolute;
+margin-top: 30px;
+margin-left: 230px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #9a9a9b;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7d7d7d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.inner-card
+{
+  width: 308px;
+  background-color:var(--inner-card-bg);
+  display: flex;
+  justify-content:center;
+  border-radius: 30px;
+  box-shadow: var(--inner-card-shadow);
+}
+.inner-details
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-image
+{
+  border-radius: 100px;
+  background-color: var(--profile-image);
+  height: 110px;
+  width: 110px;
+  box-shadow: var(--inner-card-shadow);
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.name
+{
+  color: var(--name-color);
+  font-weight: 600;
+}
+.role
+{
+  color: var(--role-color);
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about
+{
+   width: 275px;
+  color: var(--about-color);
+  font-size: small; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+.gmail
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  padding: 5px;
+  border-radius: 50px;
+  width: 180px;
+  color: var(--gmail-color);
+  font-size: small;
+  background-color:var(--gmail-bg);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.socialmedia
+{
+  margin-block: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  
+}
+.test
+{
+  background-color:var(--gmail-bg);
+  width: 20px;
+  height: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; ;
+}
+a
+{
+  text-decoration: none;
+}
